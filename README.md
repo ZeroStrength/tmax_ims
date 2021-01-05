@@ -14,6 +14,7 @@ from tmax_ims import IMS
 
 ims = IMS('your_id', 'your_password')
 
+# return type pandas.DataFrame
 print( ims.fetch() )
 
 ```
