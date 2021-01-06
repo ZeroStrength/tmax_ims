@@ -7,11 +7,11 @@ setuptools.setup(
     name="tmax_ims",
     version="0.0.2",
     author="Changyun Lee",
-    #author_email="author@example.com",
+    author_email="brownbearpower@gmail.com",
     description="TMAX IMS issue alert package",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    #url="https://github.com/pypa/sampleproject",
+    url="https://github.com/ZeroStrength/tmax_ims",
     packages=setuptools.find_packages(),
     install_requires=['bs4', 'py-notifier', 'pandas', 'requests'],
     classifiers=[
