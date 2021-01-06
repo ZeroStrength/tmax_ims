@@ -2,9 +2,7 @@
 
 ## Download
 
-```
-pip install tmax_ims
-```
+`pip install tmax-ims`
 
 ## Example
 
@@ -35,4 +33,4 @@ ims.set_issue_list_url('http://~')
 
 ## Feature
  - IMS List fetch
- - (TODO) new ims alert
+ - (TODO) new ims alert bot
