@@ -6,31 +6,23 @@
 
 ## Example
 
-### basic fetch example
+### IMS example
 ```
 from tmax_ims import IMS
 
 ims = IMS('your_id', 'your_password')
 
-# return type pandas.DataFrame
+# Get my team's assigned issues
+# return type pandas.DataFrame with default headers
 print( ims.fetch() )
 
-```
-
-### extra settings
-```
-from tmax_ims import IMS
-
-ims = IMS('your_id', 'your_password')
-
 # set custom header
-ims.set_header(['Issue Number', 'Subject'])
+ims.set_header(['Issue Number', 'Subject', 'Handler', 'Version', 'Status'])
 
-# set custom fetch url
+# set custom fetch url (default: Issues assigned to me)
 ims.set_issue_list_url('http://~')
 
 ```
-
 ## Feature
  - IMS List fetch
  - (TODO) new ims alert bot

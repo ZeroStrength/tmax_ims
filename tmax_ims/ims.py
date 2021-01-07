@@ -5,14 +5,13 @@ import pandas as pd
 
 LOGIN_URL = 'https://ims.tmaxsoft.com/tody/auth/login.do?tmaxsso_nsso=yes'
 
-default_issue_list_url = 'https://ims.tmaxsoft.com/tody/ims/issue/issueList.do?listType=5&menuCode=issue_list&CRCheck=N'
-default_header = ["Issue Number", "Subject"]
+default_issue_list_url = 'https://ims.tmaxsoft.com/tody/ims/issue/issueList.do?listType=3&menuCode=issue_list&CRCheck=N'
+default_header = ["Issue Number", "Subject", "Handler"]
 
 class IMS:
     def __init__(self, id, pw):
         self.id = id
         self.pw = pw
-        self.session = requests.Session()
         self.issue_list = default_issue_list_url
         self.header = default_header
     def set_header(self, header):
@@ -20,6 +19,7 @@ class IMS:
     def set_issue_list_url(self, url):
         self.issue_list = url
     def login(self):
+        self.session = requests.Session()
         self.session.post(LOGIN_URL, { 'id': self.id, 'password': self.pw })
     def fetch(self):
         self.login()
