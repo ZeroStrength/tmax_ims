@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tmax_ims",
-    version="0.0.3",
+    version="0.0.4",
     author="Changyun Lee",
     author_email="brownbearpower@gmail.com",
     description="TMAX IMS issue alert package",
